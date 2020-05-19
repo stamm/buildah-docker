@@ -6,6 +6,6 @@ RUN apt-get update -qq && \
   wget -nv https://download.opensuse.org/repositories/devel:kubic:libcontainers:stable/xUbuntu_20.04/Release.key -O Release.key && \
   apt-key add - < Release.key && \
   apt-get update -qq && \
-  apt-get -qq -y install buildah && \
+  apt-get -qq -y install buildah=1.14.9-1 && \
   apt-get remove -y wget gnupg2 && \
   rm -rf /var/lib/apt/lists/*
